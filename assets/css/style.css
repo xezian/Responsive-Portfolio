@@ -247,7 +247,6 @@ textarea::placeholder, input::placeholder {
 #profileimg {
     float: left;
     width: 300px;
-    transform: rotate(90deg);
     -webkit-filter: brightness(250%) contrast(90%); 
     margin: 30px 20px 50px 20px;
     border: 1px solid #cccccc;
@@ -454,7 +453,7 @@ textarea::placeholder, input::placeholder {
     }
     .footer {
         position: absolute;
-        bottom: -1234px;
+        bottom: -1266px;
         z-index: 4;
     }
     .trick-footer {
