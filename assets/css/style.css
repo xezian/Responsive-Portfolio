@@ -453,14 +453,14 @@ textarea::placeholder, input::placeholder {
     }
     .footer {
         position: absolute;
-        bottom: -1266px;
+        bottom: -1350px;
         z-index: 4;
     }
     .trick-footer {
         display: none;
     }
     #profileimg {
-        width: 120%;
-        margin: 80px 30px 100px -40px;
+        width: 90%;
+        margin: 10% 0px 10% 5%;
     }
 }
