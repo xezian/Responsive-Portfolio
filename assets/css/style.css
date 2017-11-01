@@ -70,6 +70,7 @@ h4 {
     line-height: 70px;
 }
 .name {
+    position: relative;
     font-family: "Georgia", "Times", "Times New Roman", "serif";
     font-size: 27px;
     float: left;
@@ -78,6 +79,7 @@ h4 {
     padding-right: 20px;
     padding-left: 20px;
     line-height: 90px;
+    z-index: 4;
 }
 .form {
     position: relative;
@@ -219,7 +221,7 @@ h4 {
     bottom: 0;
     width: 100%;
     height: 70px;
-    padding: 10px;
+    padding: 10px 0px;
     color: #cccccc;
     font-size: 12px;
     font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
@@ -374,6 +376,7 @@ textarea::placeholder, input::placeholder {
     .main-content {
         width: 600px;
         margin-left: 5%;
+        height: 1500px;
     }
     .top-content {
         width: 600px;
@@ -418,23 +421,34 @@ textarea::placeholder, input::placeholder {
     }
 }
 @media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+    }
     h4 {
-        margin-top: 43%;
+        margin-top: 33%;
     }
     header {
         position: absolute;
         top: 0px;
+        right: 0px;
         width: 100%;
     }
     .name {
+        padding: 0px;
+        clear: both;
         width: 100%;
         text-align: center;
     }
     .contact, .portfolio, .about {
+        clear: both;
         position: absolute;
         line-height: 30px;
         text-align: center;
-        width: 28%;
+        width: 33.3%;
         top: 60px;       
     }
     .contact {
@@ -447,14 +461,17 @@ textarea::placeholder, input::placeholder {
         right: 66.6666%;
     }
     .main-content {
+        margin-right: 0px;
         width: 100%;
         height: 100%;
     }
     .top-content {
-        margin-left: 0;
+        margin-left: 0px;
+        margin-right: 0px;
         width: 100%;
     }
     .about-me, .contact-content {
+        clear: both;
         width: 85%;
         margin: 60px 0px 0px 0px;
     }
@@ -473,7 +490,7 @@ textarea::placeholder, input::placeholder {
     }
     .contact-wrap {
         width: 100%;
-        height: 1500px;
+        height: 15100%;
     }
     .portfolio-wrap {
         width: 100%;
@@ -484,20 +501,28 @@ textarea::placeholder, input::placeholder {
     }
     .connect-with-me {
         position: relative;
-        float: left;
+        clear: both;
         margin: 40px 0px 0px 0px;
         width: 80%;
         text-align: left;
         line-height: 30px;
     }
-    .fixed-footer {
+    .fixed-footer, .contact-footer, .portfolio-footer {
         position: absolute;
-        bottom: -1570px;
-        left: 0;
-        z-index: 4;
+        padding: 10px 0px;
+    }
+    .fixed-footer {
+        bottom: -1670px;
+    }
+    .contact-footer {
+        bottom: -1080px;
+    }
+    .portfolio-footer {
+        bottom: -1930px;
     }
     .trick-footer {
         display: none;
+        visibility: hidden;
     }
     #profileimg {
         width: 90%;
