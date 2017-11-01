@@ -1,11 +1,13 @@
 header {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 90px;
 }
 body {
+    position: relative;
     width: 100%;
+    height: 100%;
     font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
     background-image: url("../images/intersection/intersection.png");
     /* Background pattern from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns/) */
@@ -37,7 +39,7 @@ h4 {
     font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
     font-size: 17px;
     position: relative;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 15px 10px 20px;
 }
 .headers {
     background-color: #ffffff;
@@ -46,7 +48,6 @@ h4 {
     letter-spacing: 1.5px;
     font-weight: bold; 
     border-bottom: 2px solid #ebebeb;
-    margin-bottom: 10px;
     color: #4aaaa5;
 }
 .subheaders {
@@ -58,7 +59,7 @@ h4 {
     padding-bottom: 15px;
     padding-top: 5px;
     border-bottom: 2px solid #ebebeb;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 4.45px;
     color: #4aaaa5;
 }
@@ -152,13 +153,20 @@ h4 {
     width: 100%;
     position: relative;
 }
-.other-content {
+.contact-wrap {
     margin-top: 110px;
     float: left;
     margin-left: 10%;
-    height: 940px;
+    height: 670px;
+}
+.portfolio-wrap {
+    margin-top: 110px;
+    float: left;
+    margin-left: 10%;
+    height: 900px;
 }
 .portfolio-content {
+    position: relative;
     float: left;
     text-align: left;
     background-color: #ffffff;
@@ -166,7 +174,7 @@ h4 {
     padding: 10px;
     margin-right: 40px;
     border: 1px solid #cccccc;
-    z-index: 5;
+    z-index: 2;
 }
 .main-content {
     margin-top: 110px;
@@ -175,6 +183,7 @@ h4 {
     margin-left: 10%;
 }
 .about-me {
+    position: relative;
     text-align: left;
     background-color: #ffffff;
     float: left;
@@ -182,21 +191,32 @@ h4 {
     padding: 10px;
     margin-right: 40px;
     border: 1px solid #cccccc;
-    z-index: 5;
+    z-index: 2;
+}
+.contact-content {
+    position: relative;
+    float: left;
+    text-align: left;
+    background-color: #ffffff;
+    width: 608px;
+    padding: 10px;
+    margin-right: 40px;
+    border: 1px solid #cccccc;
+    z-index: 2;
 }
 .connect-with-me {
     position: absolute;
     right: 90px;
     width: 228px;
-    height: 150px;
+    height: 130px;
     text-align: center;
     background-color: #ffffff;
     border: 1px solid #cccccc;
     z-index: 1;
 }
-.footer {
+.fixed-footer {
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     height: 70px;
     padding: 10px;
@@ -209,12 +229,43 @@ h4 {
     border-top: 7px solid #4aaaa5;
     z-index: 2;
 }
-.trick-footer {
-    position: absolute;
-    bottom: -2000px;
+.contact-footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 70px;
-    padding: 10px;
+    padding: 10px 0px;
+    color: #cccccc;
+    font-size: 12px;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
+    background-color: #666666;
+    text-align: center;
+    line-height: 70px;
+    border-top: 7px solid #4aaaa5;
+    z-index: 2;
+}
+.portfolio-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0px;
+    color: #cccccc;
+    font-size: 12px;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
+    background-color: #666666;
+    text-align: center;
+    line-height: 70px;
+    border-top: 7px solid #4aaaa5;
+    z-index: 2;
+}
+.trick-footer {
+    position: absolute;
+    bottom: -2150px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0px;
     color: #cccccc;
     font-size: 12px;
     font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
@@ -248,7 +299,7 @@ textarea::placeholder, input::placeholder {
     float: left;
     width: 300px;
     -webkit-filter: brightness(250%) contrast(90%); 
-    margin: 30px 20px 50px 20px;
+    margin: 30px 35px 50px 25px;
     border: 1px solid #cccccc;
 }
 #soicon {
@@ -273,35 +324,6 @@ textarea::placeholder, input::placeholder {
     width: 50px;
     height: 50px;
 }
-/* This part I added because it would pop the 'contact me' section down under the 'about me' section as I resisized the screen from large to small in the desktop window view 
-@media screen and (max-width: 1134px) {
-    h4 {
-        margin-top: 61%;
-    }
-    .main-content {
-        width: 980px;
-        margin-left: 13%;
-    }
-    .top-content {
-        width: 820px;
-        margin-left: 13%;
-    }
-    .about-me {
-        width: 50%;
-    }
-    .portfolio-content {
-        width: 50%; 
-    }
-    .other-content {
-        height: 1300px;
-        width: 980px;
-        margin-left: 13%;
-    }
-    .form {
-        margin-right: 20px;
-    }
-}*/
-
 @media screen and (max-width: 980px) {
     h4 {
         margin-top: 49%;
@@ -317,6 +339,9 @@ textarea::placeholder, input::placeholder {
     .about-me {
         width: 50%;
     }
+    .contact-content {
+        width: 50%;
+    }
     .portfolio-content {
         width: 50%; 
     }
@@ -327,8 +352,13 @@ textarea::placeholder, input::placeholder {
     .right {
         float: left;
     }
-    .other-content {
-        height: 1600px;
+    .contact-wrap {
+        height: 671px;
+        width: 768px;
+        margin-left: 10%;
+    }
+    .portfolio-wrap {
+        height: 1540px;
         width: 768px;
         margin-left: 10%;
     }
@@ -349,7 +379,7 @@ textarea::placeholder, input::placeholder {
         width: 600px;
         margin-left: 5%;
     }
-    .about-me {
+    .about-me, .contact-content {
         width: 580px;
         margin: 0px;
     }
@@ -364,7 +394,12 @@ textarea::placeholder, input::placeholder {
     .right {
         float: left;
     }
-    .other-content {
+    .contact-wrap {
+        height: 1020px;
+        width: 600px;
+        margin-left: 5%;
+    }
+    .portfolio-wrap {
         height: 1020px;
         width: 600px;
         margin-left: 5%;
@@ -388,7 +423,7 @@ textarea::placeholder, input::placeholder {
     }
     header {
         position: absolute;
-        top; 0px;
+        top: 0px;
         width: 100%;
     }
     .name {
@@ -411,16 +446,15 @@ textarea::placeholder, input::placeholder {
     .about {
         right: 66.6666%;
     }
-    
     .main-content {
         width: 100%;
-        height: 100%
+        height: 100%;
     }
     .top-content {
         margin-left: 0;
         width: 100%;
     }
-    .about-me {
+    .about-me, .contact-content {
         width: 85%;
         margin: 60px 0px 0px 0px;
     }
@@ -437,8 +471,13 @@ textarea::placeholder, input::placeholder {
     .right {
         float: left;
     }
-    .other-content {
+    .contact-wrap {
         width: 100%;
+        height: 1500px;
+    }
+    .portfolio-wrap {
+        width: 100%;
+        height: 1800px;
     }
     .form {
         margin-right: 30px;
@@ -451,9 +490,10 @@ textarea::placeholder, input::placeholder {
         text-align: left;
         line-height: 30px;
     }
-    .footer {
+    .fixed-footer {
         position: absolute;
-        bottom: -1350px;
+        bottom: -1570px;
+        left: 0;
         z-index: 4;
     }
     .trick-footer {
